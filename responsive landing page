@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            background: url(https://wallpaperaccess.com/full/2465473.jpg);
+        }
+        .left {
+            color: white;
+            display: inline-block;
+            position: absolute;
+            top: 40px;
+            left: 34px;
+        }
+        .left img {
+            width: 53px;
+            margin: 5px 5px;
+        }
+        .mid {
+            margin: 50px auto;
+            display: block;
+            width: 33%;
+            height: 33px;
+        }
+        .right {
+            position: absolute;
+            top: 40px;
+            right: 34px;
+            display: inline-block;
+        }
+        .navbar {
+            display: inline-block;
+        }
+        .navbar li {
+            display: inline-block;
+            font-size: 15px;
+        }
+        .navbar li a {
+            color: white;
+            text-decoration: none;
+            padding: 44px 36px;
+        }
+        .navbar li a:hover, .navbar li a.visited {
+            height: 22px;
+            background-color: blue;
+            text-decoration: none;
+        }
+        .btn {
+            background-color: black;
+            color: white;
+            padding: 3px 14px;
+            border: 2px solid black;
+            border-radius: 2px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: yellow;
+        }
+        .container {
+            color: white;
+            border: 2px solid blue;
+            margin: 170px 66px;
+            padding: 75px;
+            width: 33%;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .form-group input {
+            color: white;
+            text-align: center;
+            display: block;
+            padding: 16px;
+            width: 334px;
+            margin: auto;
+            background-color: black;
+        }
+        .container button {
+            display: block;
+            width: 43%;
+            margin: auto;
+        }
+    </style>
+    <script>
+        function validateForm() {
+            var name = document.forms["gymForm"]["name"].value;
+            var age = document.forms["gymForm"]["age"].value;
+            var gender = document.forms["gymForm"]["gender"].value;
+            var locality = document.forms["gymForm"]["locality"].value;
+            if (name == "" || age == "" || gender == "" || locality == "") {
+                alert("All fields must be filled out");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="left">
+        <img src="https://graphicsfamily.com/wp-content/uploads/edd/2021/02/Vector-Gym-Logo-PSD-Template-PNG-Transparent.png" alt="Gym Logo">
+        <div>sankalp fitness</div>
+    </div>
+    <div class="mid">
+        <ul class="navbar">
+            <li><a href="">home</a></li>
+            <li><a href="">contact us</a></li>
+            <li><a href="">information</a></li>
+            <li><a href="">more</a></li>
+        </ul>
+    </div>
+    <div class="right">
+        <button class="btn">call us now</button>
+        <button class="btn">email us</button>
+    </div>
+    <div class="container">
+        <h1>Join the best gym of India</h1>
+        <form name="gymForm" action="no_action.php" onsubmit="return validateForm()">
+            <div class="form-group"> 
+                <input type="text" name="name" placeholder="Enter your name">
+            </div>
+            <div class="form-group"> 
+                <input type="text" name="age" placeholder="Enter your age">
+            </div>
+            <div class="form-group"> 
+                <input type="text" name="gender" placeholder="Enter your gender">
+            </div>
+            <div class="form-group"> 
+                <input type="text" name="locality" placeholder="Enter your locality">
+            </div>
+            <button class="btn">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
